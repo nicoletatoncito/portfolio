@@ -210,3 +210,19 @@ a{color:inherit;text-decoration:none}
   z-index: 6;
   pointer-events: auto;
 }
+/* Project links (Demo / Código) */
+.project-links {
+  display: flex;
+  gap: 14px;
+}
+
+.project-links a {
+  color: var(--brand2);
+  font-weight: 500;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.project-links a:hover {
+  color: var(--text);
+  transform: translateY(-1px);
+}
