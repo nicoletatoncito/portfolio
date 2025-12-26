@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Portafolio | Geraldine Infanzon</title>
+    <meta name="description" content="Portafolio profesional de proyectos, habilidades y contacto." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a class="logo" href="#">GI<span>.</span></a>
+        <div class="nav-links">
+          <a href="#proyectos">Proyectos</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-text">
+          <p class="tag">Disponible para prácticas / trabajo</p>
+          <h1>Hola, soy <span>Geraldine</span>. Construyo proyectos web limpios y modernos.</h1>
+          <p class="subtitle">
+            Portafolio con enfoque profesional: estructura clara, buen diseño, Git/GitHub, y proyectos reales.
+          </p>
+
+          <div class="cta">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn-ghost" href="#contacto">Contactar</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat-num" id="years">0</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" id="tech">0</span>
+              <span class="stat-label">Tecnologías</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" id="coffee">0</span>
+              <span class="stat-label">Commits</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-top">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <pre class="code">
+<span class="cmt">// resumen</span>
+<span class="kw">const</span> perfil = {
+  rol: <span class="str">"Frontend / Estudiante"</span>,
+  foco: <span class="str">"UI limpia + buenas prácticas"</span>,
+  github: <span class="str">"github.com/tu-usuario"</span>
+};</pre>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section container">
+        <h2>Proyectos</h2>
+        <p class="section-sub">Una selección de trabajos con enfoque real (estructura, diseño y buenas prácticas).</p>
+
+        <div class="grid">
+          <article class="project">
+            <h3>Landing Pro</h3>
+            <p>Landing moderna con secciones, CTA y diseño responsivo.</p>
+            <div class="pill-row">
+              <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JS</span>
+            </div>
+            <div class="project-actions">
+              <a class="link" href="#" aria-disabled="true">Demo</a>
+              <a class="link" href="#" aria-disabled="true">Código</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Mini App</h3>
+            <p>Proyecto pequeño pero completo con interacción y componentes.</p>
+            <div class="pill-row">
+              <span class="pill">UI</span><span class="pill">Accesible</span><span class="pill">Responsive</span>
+            </div>
+            <div class="project-actions">
+              <a class="link" href="#" aria-disabled="true">Demo</a>
+              <a class="link" href="#" aria-disabled="true">Código</a>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3>Portafolio</h3>
+            <p>Este portafolio, versionado con Git y publicado en GitHub.</p>
+            <div class="pill-row">
+              <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">Deploy</span>
+            </div>
+            <div class="project-actions">
+              <a class="link" href="#" aria-disabled="true">Demo</a>
+              <a class="link" href="#" aria-disabled="true">Código</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="habilidades" class="section container">
+        <h2>Habilidades</h2>
+        <p class="section-sub">Lo que manejo y lo que sigo mejorando.</p>
+
+        <div class="skills">
+          <div class="skill"><span>HTML</span><div class="bar"><i style="width:90%"></i></div></div>
+          <div class="skill"><span>CSS</span><div class="bar"><i style="width:85%"></i></div></div>
+          <div class="skill"><span>JavaScript</span><div class="bar"><i style="width:70%"></i></div></div>
+          <div class="skill"><span>Git/GitHub</span><div class="bar"><i style="width:75%"></i></div></div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section container">
+        <h2>Contacto</h2>
+        <p class="section-sub">¿Trabajamos juntos? Escríbeme:</p>
+
+        <div class="contact">
+          <a class="btn" href="mailto:tucorreo@gmail.com">Enviar correo</a>
+          <a class="btn btn-ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Geraldine Infanzon — Hecho con HTML/CSS/JS + Git.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
