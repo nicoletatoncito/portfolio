@@ -6,44 +6,55 @@
   --brand:#7c3aed;
   --brand2:#22d3ee;
   --border:rgba(255,255,255,.08);
-  --shadow: 0 20px 60px rgba(0,0,0,.5);
+  --shadow:0 20px 60px rgba(0,0,0,.5);
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
+
 body{
   margin:0;
   font-family:Poppins,system-ui,Segoe UI,Arial;
-  background: radial-gradient(900px 500px at 15% 10%, rgba(124,58,237,.35), transparent 60%),
-              radial-gradient(700px 450px at 85% 15%, rgba(34,211,238,.25), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(900px 500px at 15% 10%, rgba(124,58,237,.35), transparent 60%),
+    radial-gradient(700px 450px at 85% 15%, rgba(34,211,238,.25), transparent 55%),
+    var(--bg);
   color:var(--text);
 }
 
 a{color:inherit;text-decoration:none}
 .container{width:min(1100px,92%); margin-inline:auto}
 
+/* ================= HEADER ================= */
+
 .header{
-  position:sticky; top:0;
-  background: rgba(11,15,23,.65);
-  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+  background:rgba(11,15,23,.65);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--border);
   z-index:10;
 }
 
 .nav{
-  display:flex; align-items:center; justify-content:space-between;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:14px 0;
 }
+
 .logo{font-weight:800; letter-spacing:.5px}
 .logo span{color:var(--brand2)}
+
 .nav-links{display:flex; gap:18px; color:var(--muted)}
 .nav-links a:hover{color:var(--text)}
+
+/* ================= HERO ================= */
 
 .hero{
   padding:70px 0 40px;
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns:1.2fr .8fr;
   gap:28px;
   align-items:center;
 }
@@ -55,57 +66,77 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--border);
   border-radius:999px;
   color:var(--muted);
-  background: rgba(255,255,255,.03);
+  background:rgba(255,255,255,.03);
 }
 
-.hero h1{font-size:clamp(28px,4vw,44px); line-height:1.1; margin:12px 0}
+.hero h1{
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.1;
+  margin:12px 0;
+}
+
 .hero h1 span{
-  background: linear-gradient(90deg, var(--brand), var(--brand2));
-  -webkit-background-clip:text; background-clip:text;
+  background:linear-gradient(90deg,var(--brand),var(--brand2));
+  -webkit-background-clip:text;
+  background-clip:text;
   color:transparent;
 }
 
 .subtitle{color:var(--muted); max-width:56ch}
 
-.cta{display:flex; gap:12px; margin:18px 0 18px}
+.cta{display:flex; gap:12px; margin:18px 0}
+
 .btn{
-  display:inline-flex; align-items:center; justify-content:center;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   padding:11px 16px;
   border-radius:12px;
   border:1px solid var(--border);
-  background: linear-gradient(90deg, rgba(124,58,237,.9), rgba(34,211,238,.35));
-  box-shadow: 0 10px 30px rgba(124,58,237,.18);
+  background:linear-gradient(90deg, rgba(124,58,237,.9), rgba(34,211,238,.35));
+  box-shadow:0 10px 30px rgba(124,58,237,.18);
 }
-.btn:hover{transform: translateY(-1px)}
+
+.btn:hover{transform:translateY(-1px)}
+
 .btn-ghost{
-  background: rgba(255,255,255,.03);
+  background:rgba(255,255,255,.03);
   box-shadow:none;
 }
 
+/* ================= STATS ================= */
+
 .stats{display:flex; gap:18px; margin-top:10px}
+
 .stat{
   border:1px solid var(--border);
-  background: rgba(255,255,255,.03);
+  background:rgba(255,255,255,.03);
   border-radius:16px;
   padding:10px 12px;
   min-width:120px;
 }
+
 .stat-num{display:block; font-size:22px; font-weight:800}
 .stat-label{color:var(--muted); font-size:12px}
 
+/* ================= CODE CARD ================= */
+
 .hero-card{
   border:1px solid var(--border);
-  background: rgba(15,23,42,.6);
+  background:rgba(15,23,42,.6);
   border-radius:18px;
-  box-shadow: var(--shadow);
+  box-shadow:var(--shadow);
   overflow:hidden;
 }
+
 .card-top{
-  display:flex; gap:8px;
+  display:flex;
+  gap:8px;
   padding:10px 12px;
   border-bottom:1px solid var(--border);
-  background: rgba(255,255,255,.02);
+  background:rgba(255,255,255,.02);
 }
+
 .dot{width:10px;height:10px;border-radius:50%}
 .red{background:#ef4444}
 .yellow{background:#f59e0b}
@@ -119,110 +150,127 @@ a{color:inherit;text-decoration:none}
   font-size:13px;
   line-height:1.5;
 }
+
 .cmt{color:#93c5fd}
 .kw{color:#c084fc}
 .str{color:#5eead4}
+
+/* ================= SECTIONS ================= */
 
 .section{padding:46px 0}
 .section h2{font-size:28px; margin:0 0 8px}
 .section-sub{color:var(--muted); margin:0 0 22px}
 
+/* ================= PROJECTS ================= */
+
 .grid{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:16px;
 }
 
 .project{
+  position:relative;
   border:1px solid var(--border);
-  background: rgba(255,255,255,.03);
+  background:rgba(255,255,255,.03);
   border-radius:18px;
   padding:16px;
-  transition: transform .15s ease;
+  transition:transform .15s ease;
 }
-.project:hover{transform: translateY(-2px)}
+
+.project:hover{transform:translateY(-2px)}
 .project p{color:var(--muted)}
 
-.pill-row{display:flex; gap:8px; flex-wrap:wrap; margin:10px 0}
+.project::before,
+.project::after{
+  pointer-events:none;
+}
+
+.pill-row{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+
 .pill{
   font-size:12px;
   padding:6px 10px;
   border-radius:999px;
   border:1px solid var(--border);
-  background: rgba(255,255,255,.02);
+  background:rgba(255,255,255,.02);
   color:#cbd5e1;
 }
 
-.project-actions{display:flex; gap:12px; margin-top:10px}
-.link{color:var(--brand2)}
-.link[aria-disabled="true"]{opacity:.5; pointer-events:none}
+/* ===== Project actions (Demo / Code) ===== */
+
+.project-actions{
+  display:flex;
+  gap:12px;
+  margin-top:10px;
+  position:relative;
+  z-index:5;
+}
+
+.link{
+  color:var(--brand2);      /* COLOR ORIGINAL */
+  font-weight:500;
+  transition:color .15s ease, transform .15s ease;
+}
+
+.link:hover{
+  color:var(--brand);
+  transform:translateY(-1px);
+}
+
+.link[aria-disabled="true"]{
+  opacity:.5;
+  pointer-events:none;
+}
+
+/* ================= SKILLS ================= */
 
 .skills{display:grid; gap:12px; max-width:520px}
-.skill{display:grid; grid-template-columns: 140px 1fr; gap:12px; align-items:center}
+
+.skill{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:12px;
+  align-items:center;
+}
+
 .bar{
   height:12px;
   border-radius:999px;
   border:1px solid var(--border);
-  background: rgba(255,255,255,.03);
+  background:rgba(255,255,255,.03);
   overflow:hidden;
 }
+
 .bar i{
-  display:block; height:100%;
-  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  display:block;
+  height:100%;
+  background:linear-gradient(90deg,var(--brand),var(--brand2));
 }
 
+/* ================= CONTACT ================= */
+
 .contact{display:flex; gap:12px; flex-wrap:wrap}
+
+/* ================= FOOTER ================= */
 
 .footer{
   border-top:1px solid var(--border);
   padding:18px 0;
   color:var(--muted);
-  background: rgba(0,0,0,.12);
+  background:rgba(0,0,0,.12);
 }
 
-@media (max-width: 900px){
-  .hero{grid-template-columns: 1fr; padding-top:46px}
-  .grid{grid-template-columns: 1fr}
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr; padding-top:46px}
+  .grid{grid-template-columns:1fr}
   .stat{min-width:auto; flex:1}
 }
-/* Fix: allow clicking links inside project cards */
-.project-card,
-.project {
-  position: relative;
-}
 
-/* If you have overlays/pseudo-elements, they must not capture clicks */
-.project-card::before,
-.project-card::after,
-.project::before,
-.project::after {
-  pointer-events: none;
-}
-
-/* Make links sit above any overlay */
-.project-links {
-  position: relative;
-  z-index: 5;
-}
-
-.project-links a {
-  position: relative;
-  z-index: 6;
-  pointer-events: auto;
-}
-/* Project links (Demo / Código) */
-.project-links {
-  display: flex;
-  gap: 14px;
-}
-
-.project-links a {
-  color: var(--brand2);
-  font-weight: 500;
-  transition: color .2s ease, transform .2s ease;
-}
-
-.project-links a:hover {
-  color: var(--text);
-  transform: translateY(-1px);
-}
