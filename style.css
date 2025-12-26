@@ -185,3 +185,28 @@ a{color:inherit;text-decoration:none}
   .grid{grid-template-columns: 1fr}
   .stat{min-width:auto; flex:1}
 }
+/* Fix: allow clicking links inside project cards */
+.project-card,
+.project {
+  position: relative;
+}
+
+/* If you have overlays/pseudo-elements, they must not capture clicks */
+.project-card::before,
+.project-card::after,
+.project::before,
+.project::after {
+  pointer-events: none;
+}
+
+/* Make links sit above any overlay */
+.project-links {
+  position: relative;
+  z-index: 5;
+}
+
+.project-links a {
+  position: relative;
+  z-index: 6;
+  pointer-events: auto;
+}
